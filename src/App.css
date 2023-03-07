@@ -1,0 +1,13 @@
+.App {
+  font-family: "Source Sans Pro", sans-serif;
+  /* padding: 15px; */
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    border: 2px solid purple;
+    width: 100%;
+    display: flex;
+  }
+}

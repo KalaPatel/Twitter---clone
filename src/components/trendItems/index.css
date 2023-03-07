@@ -1,0 +1,21 @@
+.trendTopics {
+  padding: 5px 0;
+  border-bottom: 0.3px solid #edf1f4;
+}
+/* 
+.trendTopics_mobileMenu {
+  padding: 12px 30px 12px 20px;
+  border: 0.8px solid #8c8e9251;
+  position: absolute;
+  box-shadow: 0 3px 8px rgba(0.3);
+  width: 250px;
+  background-color: white;
+  top: 55px;
+  left: 1px;
+  transition: all 0.55s linear;
+} */
+.trendTopics p,
+span {
+  font-size: 0.9rem;
+  color: #9ea2a5;
+}
