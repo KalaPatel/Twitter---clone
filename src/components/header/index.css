@@ -1,6 +1,6 @@
 .mobile_header {
   display: flex;
-  padding: 15px;
+  padding: 10px 30px;
   width: 100vw;
   justify-content: space-between;
   align-items: center;
@@ -10,20 +10,13 @@
   display: none;
 }
 
-.header_img {
-  height: 40px;
-  width: 40px;
+.logo_icon {
+  font-size: 2rem;
+  color: #259ef3;
   cursor: pointer;
-  transition: all 0.35;
+  font-weight: bold;
 }
 
-.hamburgerIcon {
-  height: 30px;
-  width: 30px;
-}
-.header_img:hover {
-  transform: scale(1.1);
-}
 @media screen and (min-width: 768px) {
   .mobile_header {
     display: none;
@@ -44,7 +37,7 @@
     border-radius: 20px;
     background-color: #03a9f4;
     cursor: pointer;
-    width: 160px;
+    width: 140px;
   }
 }
 

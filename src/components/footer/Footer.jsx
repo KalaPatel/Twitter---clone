@@ -1,29 +1,17 @@
 import SideTrends from "../sideTrend";
+import { RiHome7Fill } from "react-icons/ri";
+import { GoSearch } from "react-icons/go";
+import { FiBell } from "react-icons//fi";
+import { HiOutlineEnvelope } from "react-icons/hi2";
 import "./index.css";
 const Footer = () => {
   return (
     <div className="Footer">
       <div className="footer_mobile">
-        <img
-          className="footer_img"
-          src="https://img.icons8.com/color/256/top-menu.png"
-          alt="home icon"
-        />
-        <img
-          className="footer_img"
-          src="https://img.icons8.com/ios-glyphs/256/search--v1.png"
-          alt="search icon"
-        />
-        <img
-          className="footer_img"
-          src="https://img.icons8.com/fluency-systems-regular/256/appointment-reminders--v1.png"
-          alt="notification icon"
-        />
-        <img
-          className="footer_img"
-          src="https://img.icons8.com/windows/256/new-post.png"
-          alt="message icon"
-        />
+        <RiHome7Fill className="icons" />
+        <GoSearch className="icons" />
+        <FiBell className="icons" />
+        <HiOutlineEnvelope className="icons" />
       </div>
       <div className="larger-screen-footer">
         <SideTrends />

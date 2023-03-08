@@ -1,9 +1,6 @@
 import "./index.css";
-import TrendItems from "../trendItems";
-// import { CiSearch } from "react-icons/ci";
+import TrendList from "../trendList";
 import { CiSettings } from "react-icons/ci";
-import { trendMock } from "../../mocks/trendsMocks.js";
-// import TrendList from "../trendList";
 
 const SideTrends = () => {
   return (
@@ -11,15 +8,13 @@ const SideTrends = () => {
       <div className="input_container">
         <input type="text" placeholder="Search twitter" />
       </div>
-      <div className="TrendContainer">
+      <div className="TrendContainer .TrendContainer_mobileMenu">
         <div className="trendCaption">
           <h2>Trends for you</h2>
           <CiSettings className="trends_icons" />
         </div>
 
-        {trendMock.map((trend) => (
-          <TrendItems trends={trend} />
-        ))}
+        <TrendList styleType="" />
 
         <p className="link"> Show More</p>
       </div>

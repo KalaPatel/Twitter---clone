@@ -29,6 +29,7 @@
 }
 
 .user_name {
+  cursor: pointer;
   font-weight: bold;
   color: #2b2c30;
 }
@@ -38,8 +39,36 @@
   color: #a7aab2;
 }
 
+.user_email:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .post_content p {
   font-size: 0.8em;
+}
+
+.post_icons {
+  font-size: 2rem;
+  cursor: pointer;
+  /* color: #71767b; */
+}
+
+.post_icons:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+.upload:hover,
+.comment:hover {
+  color: rgb(29, 155, 240);
+}
+
+.retweet:hover {
+  color: rgb(0, 186, 124);
+}
+
+.heart:hover {
+  color: rgb(249, 24, 128);
 }
 
 .icons_container {
@@ -53,5 +82,6 @@
 
 .icons_container div {
   display: flex;
+  align-items: center;
   gap: 5px;
 }

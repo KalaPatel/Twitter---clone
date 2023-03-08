@@ -1,42 +1,36 @@
 import { useState } from "react";
 import HamburgerMenu from "../hamburgerMenu";
 import SideMenu from "../sideMenu";
+import TrendList from "../trendList";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaTwitter } from "react-icons/fa";
+import { HiOutlineSparkles } from "react-icons/hi";
 import "./index.css";
 const Header = () => {
   const [hamburgerMenuStatus, setHamburgerMenuStatus] = useState(false);
-
+  const [trendMenuStatus, setTrendMenuStatus] = useState(false);
   const HamburgerMenuOpen = () => {
     setHamburgerMenuStatus(!hamburgerMenuStatus);
-    console.log(hamburgerMenuStatus);
+  };
+
+  const TrendMenuOpen = () => {
+    setTrendMenuStatus(!trendMenuStatus);
   };
 
   return (
     <div className="Header">
       <div className="mobile_header">
-        <img
-          className="header_img hamburgerIcon"
-          src="https://img.icons8.com/external-those-icons-flat-those-icons/256/external-Menu-interface-those-icons-flat-those-icons.png"
-          alt="hamburger menu icon"
-          onClick={HamburgerMenuOpen}
-        />
+        <GiHamburgerMenu className="icons" onClick={HamburgerMenuOpen} />
+
         {hamburgerMenuStatus ? <HamburgerMenu /> : null}
-        <img
-          className="header_img"
-          src="https://img.icons8.com/color/256/twitter--v1.png"
-          alt="twitter logo"
-        />
-        <img
-          className="header_img"
-          src="https://img.icons8.com/material-outlined/256/sparkling.png"
-          alt="trends menu icon"
-        />
+        <FaTwitter className="logo_icon" />
+        <HiOutlineSparkles className="icons" onClick={TrendMenuOpen} />
+        {trendMenuStatus ? (
+          <TrendList styleType="trendTopics_mobileMenu" />
+        ) : null}
       </div>
       <div className="larger_screen_header">
-        <img
-          className="header_img"
-          src="https://img.icons8.com/color/256/twitter--v1.png"
-          alt="twitter logo"
-        />
+        <FaTwitter className="logo_icon" />
         <SideMenu styleType="header_fullscreen_sideMenu" />
         <button className="Btn_tweet">Tweet</button>
       </div>

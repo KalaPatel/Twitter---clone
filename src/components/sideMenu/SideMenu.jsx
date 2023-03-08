@@ -1,58 +1,41 @@
+import { RiHome7Fill } from "react-icons/ri";
+import { CiCircleMore } from "react-icons/ci";
+import { HiOutlineHashtag } from "react-icons/hi";
+import { FiBell, FiBookmark } from "react-icons//fi";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { RiFileList2Line } from "react-icons/ri";
 import "./index.css";
 
 const SideMenu = ({ styleType }) => {
   return (
     <div className={styleType}>
       <ul className="list_container">
-        <li className="list_Item">
-          <img
-            className="footer_img"
-            src="https://img.icons8.com/color/256/top-menu.png"
-            alt="home icon"
-          />
+        <li className="list_Item icons">
+          <RiHome7Fill />
           <span>Home</span>
         </li>
-        <li className="list_Item">
-          <img
-            className="header_img"
-            src="https://img.icons8.com/fluency-systems-filled/256/hashtag-large.png"
-            alt="twitter logo"
-          />
+        <li className="list_Item icons">
+          <HiOutlineHashtag className="icons" />
+
           <span>Explore</span>
         </li>
-        <li className="list_Item">
-          <img
-            className="header_img"
-            src="https://img.icons8.com/fluency-systems-regular/256/appointment-reminders--v1.png"
-            alt="notification icon"
-          />
+        <li className="list_Item icons">
+          <FiBell />
           <span>Notification</span>
         </li>
-        <li className="list_Item">
-          <img
-            className="header_img"
-            src="https://img.icons8.com/windows/256/new-post.png"
-            alt="message icon"
-          />
+        <li className="list_Item icons">
+          <HiOutlineEnvelope />
           <span>Message</span>
         </li>
-        <li className="list_Item">
-          <img
-            className="header_img"
-            src="https://img.icons8.com/material/256/bookmark-outline.png"
-            alt="bookmark icon"
-          />
+        <li className="list_Item icons">
+          <FiBookmark />
           <span>Bookmark</span>
         </li>
-        <li className="list_Item">
-          <img
-            className="header_img"
-            src="https://img.icons8.com/material-rounded/256/list.png"
-            alt="lists icon"
-          />
+        <li className="list_Item icons">
+          <RiFileList2Line />
           <span>Lists</span>
         </li>
-        <li className="list_Item">
+        <li className="list_Item icons">
           <div className="profile_img_container_sideMenu">
             <img
               className="profile_pic_sideMenu"
@@ -61,6 +44,10 @@ const SideMenu = ({ styleType }) => {
             />
             <span>Profile</span>
           </div>
+        </li>
+        <li className="list_Item icons">
+          <CiCircleMore />
+          <span>More</span>
         </li>
       </ul>
     </div>

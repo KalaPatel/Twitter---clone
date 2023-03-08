@@ -1,0 +1,23 @@
+.trendTopics_mobileMenu {
+  padding: 12px 30px 12px 20px;
+  border: 0.8px solid #8c8e9251;
+  position: absolute;
+  box-shadow: 0 3px 8px rgba(0.3);
+  width: 350px;
+  background-color: white;
+  top: 55px;
+  right: 1px;
+  transition: all 0.15s linear;
+  animation-name: openTrendMenu;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes openTrendMenu {
+  0% {
+    right: -250px;
+  }
+  100% {
+    right: 0px;
+  }
+}

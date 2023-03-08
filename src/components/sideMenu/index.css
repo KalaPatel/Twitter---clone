@@ -7,13 +7,20 @@
   background-color: white;
   top: 55px;
   left: 1px;
-  transition: all 0.55s linear;
+  transition: all 0.15s linear;
+  animation-name: openMenu;
+  animation-duration: 1s;
+  animation-direction: alternate;
 }
 
 .header_fullscreen_sideMenu {
   margin-bottom: 10px;
+  margin: 20px 0;
+  padding: 0 5px;
 }
-
+/* .list_Item .navbar_text {
+  font-size: 1rem;
+} */
 .profile_img_container_sideMenu {
   gap: 8px;
   display: flex;
@@ -21,8 +28,8 @@
 }
 
 .profile_img_container_sideMenu .profile_pic_sideMenu {
-  height: 42px;
-  width: 42px;
+  height: 32px;
+  width: 32px;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -37,4 +44,25 @@
   font-size: 0.9rem;
   display: flex;
   align-items: center;
+}
+.list_Item span:hover {
+  color: #259ef3;
+}
+
+@keyframes openMenu {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes closeMenu {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 0px;
+  }
 }

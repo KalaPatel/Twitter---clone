@@ -31,13 +31,19 @@
 }
 
 .trends_icons {
+  cursor: pointer;
   font-size: 1.2rem;
   color: #4490c2;
   font-weight: bold;
 }
 .TrendContainer .link {
+  cursor: pointer;
   padding: 5px 0;
   text-align: center;
   font-weight: light;
   color: #4490c2;
+}
+
+.TrendContainer .link:hover {
+  text-decoration: underline;
 }

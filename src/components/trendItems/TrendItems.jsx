@@ -2,6 +2,7 @@ import "./index.css";
 import { CiUser } from "react-icons/ci";
 const TrendItems = ({ trends }) => {
   const {
+    id,
     location,
     main_topic,
     second_topic,
@@ -10,7 +11,7 @@ const TrendItems = ({ trends }) => {
     nPeopleTweeting,
   } = trends;
   return (
-    <div className="trendTopics">
+    <div className="trendTopics" id={id}>
       {location ? <p>Trending {location}</p> : null}
       {main_topic ? <h4>#{main_topic}</h4> : null}
       {second_topic ? <p>Trending with: # {second_topic}</p> : null}

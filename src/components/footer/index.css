@@ -18,6 +18,17 @@
   cursor: pointer;
 }
 
+.icons {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.icons:hover {
+  color: #259ef3;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
 .footer_img:hover {
   transform: scale(1.1);
 }

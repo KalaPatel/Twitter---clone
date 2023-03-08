@@ -1,52 +1,50 @@
 import "./index.css";
+import { useEffect, useState } from "react";
+import { FaRegComment, FaRegHeart } from "react-icons/fa";
+import { AiOutlineRetweet } from "react-icons/ai";
+import { BiUpload } from "react-icons/bi";
 
 const PostCard = ({ postData }) => {
-  const { userName, email, img, body } = postData;
+  const [userData, setUserData] = useState([]);
+  const { body, userId } = postData;
+
+  useEffect(() => {
+    fetch(`https://dummyjson.com/user/${userId}`)
+      .then((res) => res.json())
+      .then((data) => setUserData(data));
+  }, []);
+
   return (
     <div className="PostCard">
       <div className="img_container">
-        <img className="profile_pic" src={img} alt="Profile picture" />
+        <img
+          className="profile_pic"
+          src={userData.image}
+          alt="Profile picture"
+        />
       </div>
       <div className="post_content">
         <div className="user_info">
-          <span className="user_name">{userName}</span>
-          <span className="user_email">{email}</span>
+          <span className="user_name">{userData.username}</span>
+          <span className="user_email">{userData.email}</span>
         </div>
         <p>{body}</p>
         <div className="icons_container">
           <div>
-            <img
-              className="post_icons"
-              src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/256/external-comments-social-media-ui-tanah-basah-basic-outline-tanah-basah.png"
-              alt="comment icon"
-            />
+            <FaRegComment className="post_icons comment" />
+            <span>5</span>
+          </div>
+          <div>
+            <AiOutlineRetweet className="post_icons retweet" />
+            <span>5</span>
+          </div>
+          <div>
+            <FaRegHeart className="post_icons heart" />
             <span>5</span>
           </div>
 
           <div>
-            <img
-              className="post_icons"
-              src="https://img.icons8.com/fluency-systems-regular/256/retweet.png"
-              alt="retweet icon"
-            />
-            <span>5</span>
-          </div>
-
-          <div>
-            <img
-              className="post_icons"
-              src="https://img.icons8.com/material-outlined/256/hearts.png"
-              alt="heart icon"
-            />
-            <span>5</span>
-          </div>
-
-          <div>
-            <img
-              className="post_icons"
-              src="https://img.icons8.com/external-becris-lineal-becris/256/external-upload-mintab-for-ios-becris-lineal-becris.png"
-              alt="upload icon"
-            />
+            <BiUpload className="post_icons upload" />
             <span>5</span>
           </div>
         </div>
