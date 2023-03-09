@@ -1,4 +1,7 @@
 .mobile_header {
+  /* position: fixed; */
+  background-color: white;
+  top: 0;
   display: flex;
   padding: 10px 30px;
   width: 100vw;
@@ -24,6 +27,7 @@
 
   .larger_screen_header {
     height: 100%;
+    width: 300px;
     display: block;
     padding: 12px 0px 12px 50px;
     border-right: 0.8px solid #8c8e9228;

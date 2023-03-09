@@ -5,7 +5,7 @@ import { VscGraph } from "react-icons/vsc";
 import { HiOutlineSparkles } from "react-icons/hi";
 import PostList from "../PostList/";
 
-const Content = () => {
+const Content = ({ refProp }) => {
   return (
     <div className="Content">
       <div className="larger_screen_content">
@@ -26,9 +26,8 @@ const Content = () => {
             <VscGraph className="icons" />
           </div>
         </div>
-        <div></div>
       </div>
-      <PostList />
+      <PostList refProp={refProp} />
     </div>
   );
 };
