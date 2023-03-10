@@ -2,8 +2,11 @@ import "./index.css";
 import PostCard from "../postCard";
 import { useEffect, useState, useRef } from "react";
 
-const PostList = ({ refProp }) => {
+const PostList = ({ refProp, submit, setPutPostData, setPutModalOn }) => {
   const [postData, setPostData] = useState([]);
+
+  const filterPostBySearch = () =>
+    postData.filter((text) => text.body.includes(submit));
 
   // Esercizio 09-03-2023 - useRef
   // Ho utilizzato la useRef per fare in modo che in mobalità mobile,
@@ -43,8 +46,13 @@ const PostList = ({ refProp }) => {
           <p>Mentions</p>
         </div>
       </div>
-      {postData.map((post) => (
-        <PostCard postData={post} key={post.id} />
+      {filterPostBySearch().map((post) => (
+        <PostCard
+          postData={post}
+          key={post.id}
+          setPutPostData={setPutPostData}
+          setPutModalOn={setPutModalOn}
+        />
       ))}
     </div>
   );

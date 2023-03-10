@@ -4,7 +4,7 @@ import { GoSearch } from "react-icons/go";
 import { FiBell } from "react-icons//fi";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import "./index.css";
-const Footer = () => {
+const Footer = ({ setSubmit }) => {
   return (
     <div className="Footer">
       <div className="footer_mobile">
@@ -14,7 +14,7 @@ const Footer = () => {
         <HiOutlineEnvelope className="icons" />
       </div>
       <div className="larger-screen-footer">
-        <SideTrends />
+        <SideTrends setSubmit={setSubmit} />
       </div>
     </div>
   );

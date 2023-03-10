@@ -4,9 +4,14 @@ import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { AiOutlineRetweet } from "react-icons/ai";
 import { BiUpload } from "react-icons/bi";
 
-const PostCard = ({ postData }) => {
+const PostCard = ({ postData, setPutPostData, setPutModalOn }) => {
   const [userData, setUserData] = useState([]);
   const { body, userId } = postData;
+
+  const updatePostFun = () => {
+    setPutPostData(postData);
+    setPutModalOn(true);
+  };
 
   useEffect(() => {
     fetch(`https://dummyjson.com/user/${userId}`)
@@ -44,7 +49,7 @@ const PostCard = ({ postData }) => {
           </div>
 
           <div>
-            <BiUpload className="post_icons upload" />
+            <BiUpload className="post_icons upload" onClick={updatePostFun} />
             <span>5</span>
           </div>
         </div>

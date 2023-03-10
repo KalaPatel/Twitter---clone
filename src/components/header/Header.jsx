@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HamburgerMenu from "../hamburgerMenu";
+// import HamburgerMenu from "../hamburgerMenu";
 import SideMenu from "../sideMenu";
 import TrendList from "../trendList";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -22,7 +22,9 @@ const Header = () => {
       <div className="mobile_header">
         <GiHamburgerMenu className="icons" onClick={HamburgerMenuOpen} />
 
-        {hamburgerMenuStatus ? <HamburgerMenu /> : null}
+        {hamburgerMenuStatus ? (
+          <SideMenu styleType="hamburger_sideMenu" />
+        ) : null}
         <FaTwitter className="logo_icon" />
         <HiOutlineSparkles className="icons" onClick={TrendMenuOpen} />
         {trendMenuStatus ? (

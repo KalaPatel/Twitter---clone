@@ -5,7 +5,8 @@ import { VscGraph } from "react-icons/vsc";
 import { HiOutlineSparkles } from "react-icons/hi";
 import PostList from "../PostList/";
 
-const Content = ({ refProp }) => {
+const Content = ({ refProp, submit, setPutPostData, setPutModalOn }) => {
+  // console.log(submit);
   return (
     <div className="Content">
       <div className="larger_screen_content">
@@ -27,7 +28,12 @@ const Content = ({ refProp }) => {
           </div>
         </div>
       </div>
-      <PostList refProp={refProp} />
+      <PostList
+        refProp={refProp}
+        submit={submit}
+        setPutPostData={setPutPostData}
+        setPutModalOn={setPutModalOn}
+      />
     </div>
   );
 };

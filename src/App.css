@@ -7,6 +7,8 @@
 @media screen and (min-width: 768px) {
   .App {
     width: 100%;
+    justify-content: space-between;
     display: flex;
+    gap: 0;
   }
 }
